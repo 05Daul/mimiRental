@@ -1,4 +1,4 @@
-package com.example.mimi.jahee;
+package com.example.mimiRental.jahee;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

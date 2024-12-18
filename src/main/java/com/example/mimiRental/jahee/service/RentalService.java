@@ -1,9 +1,8 @@
-package com.example.mimi.jahee.service;
+package com.example.mimiRental.jahee.service;
 
-import com.example.mimi.jahee.dao.RentalDAO;
-import com.example.mimi.jahee.entity.RentalEntity;
+import com.example.mimiRental.jahee.dao.RentalDAO;
+import com.example.mimiRental.jahee.entity.RentalEntity;
 import jakarta.transaction.Transactional;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

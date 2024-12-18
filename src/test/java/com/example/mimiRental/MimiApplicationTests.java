@@ -1,4 +1,4 @@
-package com.example.mimi;
+package com.example.mimiRental;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
