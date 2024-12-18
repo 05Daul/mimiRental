@@ -1,4 +1,4 @@
-package com.example.mimi.publicEntity;
+package com.example.mimiRental.publicEntity;
 
 import jakarta.persistence.MappedSuperclass;
 import lombok.Data;

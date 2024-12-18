@@ -1,7 +1,7 @@
-package com.example.mimi.jahee.dao;
+package com.example.mimiRental.jahee.dao;
 
 
-import com.example.mimi.jahee.entity.RentalEntity;
+import com.example.mimiRental.jahee.entity.RentalEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import lombok.RequiredArgsConstructor;

@@ -1,10 +1,8 @@
-package com.example.mimi.jahee.Controller;
+package com.example.mimiRental.jahee.Controller;
 
-import com.example.mimi.jahee.RequestInsertDTO;
-import com.example.mimi.jahee.dao.RentalDAO;
-import com.example.mimi.jahee.entity.RentalEntity;
-import com.example.mimi.jahee.service.RentalService;
-import jakarta.transaction.Transactional;
+import com.example.mimiRental.jahee.RequestInsertDTO;
+import com.example.mimiRental.jahee.entity.RentalEntity;
+import com.example.mimiRental.jahee.service.RentalService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
