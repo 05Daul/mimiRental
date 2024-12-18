@@ -1,13 +1,13 @@
-package com.example.mimi;
+package com.example.mimiRental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MimiApplication {
+public class MimiRentalApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MimiApplication.class, args);
+        SpringApplication.run(MimiRentalApplication.class, args);
     }
 
 }

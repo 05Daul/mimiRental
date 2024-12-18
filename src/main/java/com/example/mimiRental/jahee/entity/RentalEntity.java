@@ -1,6 +1,6 @@
-package com.example.mimi.jahee.entity;
+package com.example.mimiRental.jahee.entity;
 
-import com.example.mimi.publicEntity.DateEntity;
+import com.example.mimiRental.publicEntity.DateEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -24,10 +24,10 @@ public class RentalEntity extends DateEntity {
     private Long userId;
     private Long mgmNum;
     @CreationTimestamp
-    private Date RentalDate;
+    private Date rentalDate;
     private int rentalPeriod;
-    private Date DueDate;
-    private Date ReturnDate;
+    private Date dueDate;
+    private Date returnDate;
 
     public RentalEntity(Long userId, Long mgmNum, int rentalPeriod) {
         this.userId = userId;

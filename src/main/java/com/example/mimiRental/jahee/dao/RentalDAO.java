@@ -1,7 +1,7 @@
-package com.example.mimi.jahee.dao;
+package com.example.mimiRental.jahee.dao;
 
 
-import com.example.mimi.jahee.entity.RentalEntity;
+import com.example.mimiRental.jahee.entity.RentalEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +18,9 @@ public class RentalDAO {
     }
     public RentalEntity findByRentalId(String rentalId) {
         return entityManager.find(RentalEntity.class, Long.parseLong(rentalId));
+    }
+    public RentalEntity findByRentalId(Long rentalId) {
+        return entityManager.find(RentalEntity.class, rentalId);
     }
     public List<RentalEntity> findListByUserId(String userid) {
 //        return entityManager.createQuery("select r from RentalEntity r where userId = ").getResultList()
