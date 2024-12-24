@@ -1,16 +1,14 @@
 package com.example.mimiRental.jahee.entity;
 
 import com.example.mimiRental.publicEntity.DateEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "rental")
@@ -19,15 +17,15 @@ import java.util.Date;
 @Data
 public class RentalEntity extends DateEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long rentalId;
     private Long userId;
     private Long mgmNum;
-    @CreationTimestamp
     private Date rentalDate;
     private int rentalPeriod;
     private Date dueDate;
     private Date returnDate;
+    private String item;//"노트북"
 
     public RentalEntity(Long userId, Long mgmNum, int rentalPeriod) {
         this.userId = userId;
@@ -42,6 +40,20 @@ public class RentalEntity extends DateEntity {
         this.rentalId = rentalId;
         this.userId = userId;
         this.mgmNum = mgmNum;
+    }
+
+    public RentalEntity(Long userId, Date rentalDate, int rentalPeriod, Date dueDate, String item) {
+        this.userId = userId;
+        this.rentalDate = rentalDate;
+        this.rentalPeriod = rentalPeriod;
+        this.dueDate = dueDate;
+        this.item = item;
+    }
+
+    public RentalEntity(Long userId, int rentalPeriod, Date dueDate) {
+        this.dueDate = dueDate;
+        this.userId = userId;
+        this.rentalPeriod = rentalPeriod;
     }
 }
 
