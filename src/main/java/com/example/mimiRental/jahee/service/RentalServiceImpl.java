@@ -1,5 +1,6 @@
 package com.example.mimiRental.jahee.service;
 
+import com.example.mimiRental.jahee.RequestUpdateRentalDTO;
 import com.example.mimiRental.jahee.dao.RentalDAO;
 import com.example.mimiRental.jahee.entity.RentalEntity;
 import jakarta.transaction.Transactional;
@@ -52,7 +53,8 @@ public class RentalServiceImpl implements RentalService {
         rentalDAO.updateRentalPeriod(rental);
     }
 
-    public void updateMgmNumUserId(RentalEntity rental) {
+    public void updateMgmNumUserId(RequestUpdateRentalDTO dto) {
+        RentalEntity rental = new RentalEntity(dto.getRentalId(), dto.getUserId(), dto.getMgmNum());
         rentalDAO.updateMgmNumUserId(rental);
     }
 

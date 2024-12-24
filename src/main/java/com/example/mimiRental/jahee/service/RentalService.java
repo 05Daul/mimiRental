@@ -1,5 +1,7 @@
 package com.example.mimiRental.jahee.service;
 
+import com.example.mimiRental.jahee.RequestRentalDTO;
+import com.example.mimiRental.jahee.RequestUpdateRentalDTO;
 import com.example.mimiRental.jahee.entity.RentalEntity;
 
 import java.util.List;
@@ -12,6 +14,6 @@ public interface RentalService {
     List<RentalEntity> findListByUserId(String UserId);
     void delete(RentalEntity rental);
     void updateRentalPeriod(RentalEntity rental);
-    void updateMgmNumUserId(RentalEntity rental);
+    void updateMgmNumUserId(RequestUpdateRentalDTO dto);
     void updateReturnDate(RentalEntity rental);
 }
