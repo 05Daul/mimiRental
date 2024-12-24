@@ -1,6 +1,7 @@
 package com.example.mimiRental.jahee.Controller;
 
 import com.example.mimiRental.jahee.RequestRentalDTO;
+import com.example.mimiRental.jahee.RequestUpdateRentalDTO;
 import com.example.mimiRental.jahee.entity.RentalEntity;
 import com.example.mimiRental.jahee.service.RentalService;
 import lombok.RequiredArgsConstructor;
@@ -29,9 +30,8 @@ public class RentalController {
 //        return new ResponseEntity<>(HttpStatus.OK);
 //    }
     @PostMapping("/updatemgmnum")
-    public ResponseEntity<?> updatemgmnum(@RequestBody RequestRentalDTO dto) {
-        RentalEntity rentalEntity = new RentalEntity(dto.getUserId(), dto.getRentalPeriod(), dto.getDueDate());
-        service.updateMgmNumUserId(rentalEntity);
+    public ResponseEntity<?> updatemgmnum(@RequestBody RequestUpdateRentalDTO dto) {
+        service.updateMgmNumUserId(dto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @PostMapping("/update")
