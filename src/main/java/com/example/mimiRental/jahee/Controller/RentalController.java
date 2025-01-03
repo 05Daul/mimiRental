@@ -18,11 +18,13 @@ public class RentalController {
     private final RentalService service;
 
     @PostMapping("/apply")
-    public ResponseEntity<?> insert(@RequestBody RequestRentalDTO dto) {
-        System.out.println("ggg");
-        RentalEntity rentalEntity = new RentalEntity(dto.getUserId(), dto.getRentalDate(),dto.getRentalPeriod(), dto.getDueDate(),dto.getItem());
+    public ResponseEntity<ResponseMessage> insert(@RequestBody RequestRentalDTO dto) {
+        RentalEntity rentalEntity = new RentalEntity(dto.getUserId(), dto.getRentalDate(), dto.getRentalPeriod(), dto.getDueDate(), dto.getItem());
         service.insert(rentalEntity);
-        return new ResponseEntity<>(HttpStatus.OK);
+
+        // ResponseEntity.ok()로 응답 본문과 상태 코드 함께 반환
+        ResponseMessage responseMessage = new ResponseMessage("대여 신청이 완료되었습니다.", 200);
+        return ResponseEntity.ok(responseMessage);  // 상태 코드 200과 함께 ResponseMessage 반환
     }
 //    @PostMapping("/insert")
 //    public ResponseEntity<?> insert(@RequestBody RentalEntity insertrental) {
