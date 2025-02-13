@@ -3,7 +3,7 @@ name: Push YAML to Another Repo
 on:
   push:
     branches:
-      - Devops  # `daul` 브랜치에서 변경 시 실행
+      - Devops 
     paths:
       - "argo/**/*.yaml"  # `argo` 폴더 내 YAML 파일 변경 시 실행
   workflow_dispatch:  # 수동 실행 가능
