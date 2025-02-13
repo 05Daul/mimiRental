@@ -4,7 +4,7 @@ metadata:
   name: rental
   namespace: mimiproject
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       project: mimirental
